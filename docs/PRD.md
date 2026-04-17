@@ -19,6 +19,21 @@ This document defines the **rules AI must follow when generating UI and code**.
 
 ---
 
+## 1.1 Document Ownership
+
+This PRD is the source of truth for product scope, UX intent, and acceptance criteria.
+
+For implementation constraints and AI execution behavior, use:
+
+- `.cursor/rules/figma-design-system.mdc` (design-system enforcement and Figma-to-code workflow)
+- `context/coding-standards.md` (engineering conventions)
+- `context/ai-interaction.md` and `context/current-feature.md` (delivery workflow)
+- `docs/design-system-contract.md` (Figma token/component mapping contract)
+
+When guidance conflicts, prioritize runtime code and generated artifacts first (especially `src/styles/tokens.css` and existing `components/ui/*` patterns), then apply rule/context docs.
+
+---
+
 ## 2. Core Principles
 
 ### 2.1 Design System First

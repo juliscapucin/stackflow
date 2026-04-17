@@ -6,6 +6,7 @@
 
 ## 📋 Table of Contents
 
+- [Source of Truth & Precedence](#-source-of-truth--precedence)
 - [Problem Statement](#-problem-statement)
 - [Target Users](#-target-users)
 - [Features](#-features)
@@ -13,6 +14,22 @@
 - [Tech Stack](#-tech-stack)
 - [Monetization](#-monetization)
 - [UI/UX Guidelines](#-uiux-guidelines)
+
+---
+
+## 🧭 Source of Truth & Precedence
+
+When guidance conflicts, follow this order:
+
+1. Runtime code and generated outputs (`src/styles/tokens.css`, existing `src/components/ui/*`)
+2. AI rule files in `.cursor/rules/*` (especially `figma-design-system.mdc`)
+3. Context docs in `context/*` (workflow and engineering conventions)
+4. Product intent docs in `docs/*` (`PRD.md`)
+
+Notes:
+
+- `src/styles/tokens.css` is generated. Update token sources in `design_tokens/*.json` (or token source files) and regenerate instead of manual edits.
+- Use `docs/design-system-contract.md` as the bridge between Figma naming, CSS variables, and code component mappings.
 
 ---
 

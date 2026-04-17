@@ -6,6 +6,17 @@ alwaysApply: false
 
 # Figma MCP Design System Rules
 
+## Rule Precedence
+
+When constraints conflict, follow this order:
+
+1. Runtime code and generated files (`src/styles/tokens.css`, existing `components/ui/*`)
+2. This file (`.cursor/rules/figma-design-system.mdc`)
+3. Context docs in `context/*`
+4. Product intent docs in `docs/*`
+
+Never edit generated token output directly: `src/styles/tokens.css`.
+
 ## Project Stack
 
 - **Framework**: Next.js 16, App Router
@@ -43,8 +54,8 @@ components/
 - Place new UI primitives in `components/ui/`
 - Place new page sections in `components/blocks/`
 - Use named exports for all components
-- Use `React.forwardRef` when the Base UI primitive supports refs
-- React 19: pass `ref` as a prop, not `React.forwardRef` wrapper, per https://react.dev/blog/2024/12/05/react-19#ref-as-a-prop
+- React 19 default: pass `ref` as a prop
+- Only use `React.forwardRef` when required by a third-party primitive API
 
 ---
 
@@ -72,7 +83,6 @@ IMPORTANT: Never hardcode colors, font sizes, or spacing values — always use t
 --accent-2  /* hover / emphasis */
 --accent-3  /* supporting accent (blue) */
 --accent-4  /* supporting accent (teal) */
---accent-5  /* supporting accent (sand) */
 
 /* State */
 --destructive, --destructive-subtle, --destructive-emphasis
@@ -80,28 +90,28 @@ IMPORTANT: Never hardcode colors, font sizes, or spacing values — always use t
 --ring      /* focus ring */
 
 /* Button tokens */
---buttons-button-primary-background
---buttons-button-primary-foreground
---buttons-button-primary-hover-background
---buttons-button-primary-active-background
---buttons-button-primary-disabled-background
---buttons-button-primary-disabled-foreground
+--button-primary-background
+--button-primary-foreground
+--button-primary-hover-background
+--button-primary-active-background
+--button-primary-disabled-background
+--button-primary-disabled-foreground
 
---buttons-button-secondary-background
---buttons-button-secondary-foreground
---buttons-button-secondary-border
---buttons-button-secondary-hover-background
---buttons-button-secondary-active-background
---buttons-button-secondary-disabled-background
---buttons-button-secondary-disabled-foreground
+--button-secondary-background
+--button-secondary-foreground
+--button-secondary-border
+--button-secondary-hover-background
+--button-secondary-active-background
+--button-secondary-disabled-background
+--button-secondary-disabled-foreground
 
---buttons-button-ghost-background
---buttons-button-ghost-foreground
---buttons-button-ghost-border
---buttons-button-ghost-hover-background
---buttons-button-ghost-active-background
---buttons-button-ghost-disabled-background
---buttons-button-ghost-disabled-foreground
+--button-ghost-background
+--button-ghost-foreground
+--button-ghost-border
+--button-ghost-hover-background
+--button-ghost-active-background
+--button-ghost-disabled-background
+--button-ghost-disabled-foreground
 ```
 
 ### Tailwind color mapping
@@ -210,10 +220,10 @@ Every interactive element MUST include all four states:
 ```tsx
 // hover, focus-visible, active, disabled
 className={cn(
-  "hover:bg-[--buttons-button-primary-hover-background]",
+  "hover:bg-[--button-primary-hover-background]",
   "focus-visible:outline-none focus-visible:ring-2 ring-ring",
-  "active:bg-[--buttons-button-primary-active-background]",
-  "disabled:bg-[--buttons-button-primary-disabled-background] disabled:text-[--buttons-button-primary-disabled-foreground] disabled:pointer-events-none"
+  "active:bg-[--button-primary-active-background]",
+  "disabled:bg-[--button-primary-disabled-background] disabled:text-[--button-primary-disabled-foreground] disabled:pointer-events-none"
 )}
 ```
 
