@@ -6,6 +6,7 @@
 
 ## 📋 Table of Contents
 
+- [How to Use This Doc](#-how-to-use-this-doc)
 - [Source of Truth & Precedence](#-source-of-truth--precedence)
 - [Problem Statement](#-problem-statement)
 - [Target Users](#-target-users)
@@ -14,6 +15,18 @@
 - [Tech Stack](#-tech-stack)
 - [Monetization](#-monetization)
 - [UI/UX Guidelines](#-uiux-guidelines)
+
+---
+
+## 🗂️ How to Use This Doc
+
+Use this file as a technical and product-context reference for implementation work.
+
+- For product scope, priorities, and acceptance criteria, use `docs/PRD.md`.
+- For AI/code-generation constraints and Figma implementation flow, use `.cursor/rules/figma-design-system.mdc`.
+- For day-to-day execution of the current task, use `context/current-feature.md`.
+
+This document intentionally keeps detailed reference material (architecture, examples, schema, and UX context), while the PRD is the decision-facing product document.
 
 ---
 
@@ -746,31 +759,22 @@ Stackflow/
 ├── public/
 ├── .env.example
 ├── next.config.ts
-├── tailwind.config.ts
+├── src/app/globals.css  # Tailwind v4 theme config via CSS (@theme)
 ├── tsconfig.json
 └── package.json
 ```
 
 ---
 
-## 🚀 Next Steps
+## 🚀 Delivery Tracking
 
-1. [ ] Initialize Next.js 16 project with TypeScript
-2. [ ] Set up Prisma with Neon PostgreSQL
-3. [ ] Configure NextAuth v5 (email + GitHub)
-4. [ ] Create database migrations for initial schema
-5. [ ] Seed system item types
-6. [ ] Build core UI components with shadcn/ui
-7. [ ] Implement items CRUD
-8. [ ] Implement collections CRUD
-9. [ ] Add search functionality
-10. [ ] Set up Cloudflare R2 for file uploads
-11. [ ] Integrate Stripe for subscriptions
-12. [ ] Add AI features (OpenAI integration)
-13. [ ] Implement usage limits for free tier
-14. [ ] Testing & polish
-15. [ ] Deploy to production
+Execution tracking now lives in:
+
+- `docs/PRD.md` for milestones and product planning
+- `context/current-feature.md` for active implementation tasks
+
+Keep this file focused on reusable project reference material rather than checklist progress.
 
 ---
 
-_Last updated: January 2025_
+_Last updated: April 2026_

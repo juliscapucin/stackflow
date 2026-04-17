@@ -1,5 +1,268 @@
 # Product Requirements Document (PRD)
 
+## StackFlow - AI-First Developer Knowledge Hub
+
+---
+
+## 1. Overview
+
+StackFlow is a unified workspace where developers can store, organize, search, and reuse technical knowledge (snippets, prompts, commands, notes, files, images, links) in one place.
+
+The product solves context fragmentation by replacing scattered notes, bookmarks, snippets, and chat histories with a structured, searchable system designed for AI-first workflows.
+
+This PRD defines product scope, behavior, priorities, and success criteria for StackFlow.
+
+---
+
+## 1.1 Document Ownership
+
+This PRD is the source of truth for:
+
+- product goals and scope
+- user outcomes
+- feature requirements
+- acceptance criteria
+- release priorities
+
+Implementation constraints and AI/code-generation behavior are defined in:
+
+- `.cursor/rules/figma-design-system.mdc`
+- `context/coding-standards.md`
+- `context/ai-interaction.md`
+- `context/current-feature.md`
+- `docs/design-system-contract.md`
+
+---
+
+## 2. Problem Statement
+
+Developers currently store knowledge across many disconnected places (IDE snippets, docs, gists, bookmarks, chats, local files), causing:
+
+- context switching
+- poor discoverability
+- duplicated effort
+- inconsistent team workflows
+- loss of valuable AI prompts and implementation patterns
+
+StackFlow addresses this with one fast, searchable, AI-enhanced hub.
+
+---
+
+## 3. Product Vision
+
+Build the default personal knowledge layer for developers and AI builders: a tool where every useful artifact can be captured once, organized flexibly, and reused instantly.
+
+---
+
+## 4. Target Users
+
+### 4.1 Primary Segments
+
+- Everyday developers who need quick retrieval of practical resources
+- AI-first developers who maintain reusable prompt/context libraries
+- Full-stack builders who collect cross-project implementation patterns
+- Educators/content creators who save teaching examples and references
+
+### 4.2 User Outcomes
+
+Users should be able to:
+
+- capture useful artifacts in seconds
+- find any item quickly using search/filtering
+- organize content without rigid structure
+- reuse content directly in real workflows
+- get AI assistance to enrich and optimize stored knowledge
+
+---
+
+## 5. Product Scope
+
+### 5.1 In Scope (Core Product)
+
+- Authentication (email/password + GitHub OAuth)
+- Item CRUD across system types:
+  - snippet
+  - prompt
+  - command
+  - note
+  - file
+  - image
+  - link
+- Collections and many-to-many item assignment
+- Favorites and pinned items
+- Search across title/content/tags/type
+- Markdown editing for text-based items
+- File upload and display for file/image items
+- Import/export of user data (JSON/ZIP)
+- Dark-mode-first dashboard UX
+
+### 5.2 In Scope (Pro Features)
+
+- AI auto-tag suggestions
+- AI summaries
+- AI “Explain This Code”
+- AI prompt optimization
+- Increased limits and premium capabilities
+
+### 5.3 Out of Scope (Current Phase)
+
+- Real-time collaboration
+- Team workspaces and permissions
+- Marketplace/shared public libraries
+- Native mobile applications
+
+---
+
+## 6. Functional Requirements
+
+### 6.1 Authentication & Accounts
+
+- Users can register/login via credentials or GitHub OAuth.
+- Sessions persist securely.
+- Pro status is tied to billing state.
+
+### 6.2 Items
+
+- Users can create, read, update, delete items.
+- Each item belongs to one item type and one user.
+- Items support metadata such as tags, pinned/favorite state, and timestamps.
+- File and image types support upload-backed content.
+
+### 6.3 Collections
+
+- Users can create/update/delete collections.
+- Items can belong to multiple collections.
+- Collections can be favorited.
+
+### 6.4 Search & Discovery
+
+- Search must support title, content, tags, and type signals.
+- Filtered views by type and collection must be fast and clear.
+
+### 6.5 AI Features (Pro)
+
+- AI features must operate on user-owned content only.
+- Users can request AI-generated tags, summaries, explanations, and prompt improvements.
+- AI output must be editable before saving.
+
+### 6.6 Billing & Limits
+
+- Free plan includes capped usage.
+- Pro plan unlocks advanced features and higher limits.
+- Billing events update entitlement state reliably.
+
+---
+
+## 7. Non-Functional Requirements
+
+- Performance: common dashboard interactions feel immediate.
+- Reliability: no data loss on item/collection operations.
+- Security: strict auth checks and user-level data isolation.
+- Scalability: architecture supports growth in item volume and AI usage.
+- Maintainability: modular domain-driven structure for features.
+
+---
+
+## 8. UX Requirements
+
+### 8.1 Product Experience Principles
+
+- Modern and minimal, developer-first
+- Dark mode as default, light mode optional
+- Clear hierarchy and fast scanning
+- Frictionless create/edit flows
+- Consistent interaction feedback (loading/success/error)
+
+### 8.2 Responsive Behavior
+
+- Desktop: persistent/collapsible sidebar
+- Tablet/mobile: drawer-based navigation with full-width content focus
+
+### 8.3 Accessibility
+
+- Keyboard accessible interactions
+- Visible focus states
+- Semantic structure and labels
+
+---
+
+## 9. Monetization Model
+
+### 9.1 Free Tier
+
+- Item and collection limits
+- Core text-based workflows
+- Basic search and organization
+
+### 9.2 Pro Tier
+
+- Unlimited (or expanded) usage
+- File/image capabilities
+- AI feature set
+- Export and premium tooling
+
+Pricing and packaging should remain configurable without major product refactors.
+
+---
+
+## 10. Success Metrics
+
+### 10.1 Activation
+
+- % of new users creating first item and first collection
+- time-to-first-useful-item
+
+### 10.2 Engagement
+
+- weekly active users
+- items created per active user
+- search usage and retrieval success indicators
+
+### 10.3 Retention
+
+- week-1 / month-1 retention
+- returning users with repeat creation/edit behavior
+
+### 10.4 Monetization
+
+- free-to-pro conversion rate
+- retained paid subscribers
+- AI feature adoption among pro users
+
+---
+
+## 11. Milestones (High Level)
+
+1. Foundation: auth, schema, core dashboard shell
+2. Core CRUD: items/collections + search
+3. Storage and file/image support
+4. Billing and plan enforcement
+5. AI feature rollout
+6. UX polish, performance, and launch readiness
+
+---
+
+## 12. Risks & Mitigations
+
+- Scope creep from adjacent “knowledge app” ideas -> enforce milestone gating
+- AI cost growth -> usage limits, model selection controls, and caching
+- Weak retrieval quality -> improve indexing, tagging, and search relevance loops
+- Complexity in pricing logic -> centralize entitlement checks
+
+---
+
+## 13. Open Questions
+
+- Final free/pro limits by item type?
+- Annual pricing and trial strategy?
+- Which AI features should be launch-critical vs post-launch?
+- Should custom item types be Phase 1.5 or Phase 2?
+
+---
+
+_Last updated: April 2026_
+# Product Requirements Document (PRD)
+
 ## Digital Agency Website — AI-Driven Design System
 
 ---
