@@ -13,18 +13,21 @@
     "VariableID:10890:817",
     "VariableID:10890:820",
     "VariableID:10890:821",
-    "VariableID:10890:812",
+    "VariableID:12523:3450",
+    "VariableID:12523:3451",
+    "VariableID:12523:3452",
     "VariableID:10890:822",
+    "VariableID:10890:812",
     "VariableID:10890:823",
     "VariableID:10890:824",
-    "VariableID:10890:825",
     "VariableID:10890:815",
-    "VariableID:10890:828",
+    "VariableID:10890:825",
     "VariableID:10890:814",
+    "VariableID:10890:828",
     "VariableID:10890:829",
     "VariableID:10890:830",
-    "VariableID:10890:831",
     "VariableID:10890:813",
+    "VariableID:10890:831",
     "VariableID:10890:832",
     "VariableID:10890:833",
     "VariableID:10890:834",
@@ -1506,6 +1509,135 @@
       "scopes": ["ALL_SCOPES"],
       "hiddenFromPublishing": false,
       "codeSyntax": { "WEB": "button-ghost-border" }
+    },
+    {
+      "id": "VariableID:12523:3450",
+      "name": "accent-5",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "10890:1": {
+          "r": 0.5411764979362488,
+          "g": 0.21960784494876862,
+          "b": 0.9607843160629272,
+          "a": 1
+        },
+        "10890:2": {
+          "r": 0.5411764979362488,
+          "g": 0.21960784494876862,
+          "b": 0.9607843160629272,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "10890:1": {
+          "resolvedValue": {
+            "r": 0.5411764979362488,
+            "g": 0.21960784494876862,
+            "b": 0.9607843160629272,
+            "a": 1
+          },
+          "alias": null
+        },
+        "10890:2": {
+          "resolvedValue": {
+            "r": 0.5411764979362488,
+            "g": 0.21960784494876862,
+            "b": 0.9607843160629272,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": ["ALL_SCOPES"],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:12523:3451",
+      "name": "accent-6",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "10890:1": {
+          "r": 1,
+          "g": 0.9005483984947205,
+          "b": 0.0054837740026414394,
+          "a": 1
+        },
+        "10890:2": {
+          "r": 1,
+          "g": 0.9019607901573181,
+          "b": 0.003921568859368563,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "10890:1": {
+          "resolvedValue": {
+            "r": 1,
+            "g": 0.9005483984947205,
+            "b": 0.0054837740026414394,
+            "a": 1
+          },
+          "alias": null
+        },
+        "10890:2": {
+          "resolvedValue": {
+            "r": 1,
+            "g": 0.9019607901573181,
+            "b": 0.003921568859368563,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": ["ALL_SCOPES"],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:12523:3452",
+      "name": "accent-7",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "10890:1": {
+          "r": 0.9546086192131042,
+          "g": 0.1871461719274521,
+          "b": 0.8394892811775208,
+          "a": 1
+        },
+        "10890:2": {
+          "r": 0.9546086192131042,
+          "g": 0.1871461719274521,
+          "b": 0.8394892811775208,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "10890:1": {
+          "resolvedValue": {
+            "r": 0.9546086192131042,
+            "g": 0.1871461719274521,
+            "b": 0.8394892811775208,
+            "a": 1
+          },
+          "alias": null
+        },
+        "10890:2": {
+          "resolvedValue": {
+            "r": 0.9546086192131042,
+            "g": 0.1871461719274521,
+            "b": 0.8394892811775208,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": ["ALL_SCOPES"],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
     }
   ]
 }

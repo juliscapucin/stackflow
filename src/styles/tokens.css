@@ -5,6 +5,9 @@
   --accent-2: #F68F60;
   --accent-3: #4C7ECF;
   --accent-4: #28B297;
+  --accent-5: #8A38F5;
+  --accent-6: #FFE601;
+  --accent-7: #F330D6;
   --background: #F5F3EA;
   --background-subtle: #FBFAF7;
   --destructive: #E7000B;
@@ -137,6 +140,9 @@
   --accent-2: #F68F60;
   --accent-3: #4C7ECF;
   --accent-4: #28B297;
+  --accent-5: #8A38F5;
+  --accent-6: #FFE601;
+  --accent-7: #F330D6;
   --background: #191A29;
   --background-subtle: #403F56;
   --destructive: #E7000B;
@@ -173,50 +179,4 @@
   --button-secondary-disabled-foreground: var(--muted-foreground);
   --button-secondary-foreground: var(--foreground);
   --button-secondary-hover-background: var(--accent-1);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    /* Colors */
-    --accent-1: #9BFF96;
-    --accent-2: #F68F60;
-    --accent-3: #4C7ECF;
-    --accent-4: #28B297;
-    --background: #191A29;
-    --background-subtle: #403F56;
-    --destructive: #E7000B;
-    --destructive-emphasis: #8F0007;
-    --destructive-subtle: #F8C3C5;
-    --foreground: #F5F3EA;
-    --foreground-emphasis: #FFFFFF;
-    --foreground-subtle: #FBFAF7;
-    --muted-background: #6B6C76;
-    --muted-foreground: #DEDEDE;
-    --ring: #96979E;
-    --success: #069124;
-    --success-emphasis: #035415;
-    --success-subtle: #C5DCCA;
-
-    /* Colors / Button */
-    --button-ghost-active-background: var(--muted-background);
-    --button-ghost-background: var(--background);
-    --button-ghost-border: var(--foreground);
-    --button-ghost-disabled-background: var(--muted-background);
-    --button-ghost-disabled-foreground: var(--muted-foreground);
-    --button-ghost-foreground: var(--foreground);
-    --button-ghost-hover-background: var(--background-subtle);
-    --button-primary-active-background: var(--foreground-emphasis);
-    --button-primary-background: var(--foreground);
-    --button-primary-disabled-background: var(--muted-background);
-    --button-primary-disabled-foreground: var(--muted-foreground);
-    --button-primary-foreground: var(--background);
-    --button-primary-hover-background: var(--foreground-subtle);
-    --button-secondary-active-background: var(--accent-2);
-    --button-secondary-background: var(--background);
-    --button-secondary-border: var(--foreground);
-    --button-secondary-disabled-background: var(--muted-background);
-    --button-secondary-disabled-foreground: var(--muted-foreground);
-    --button-secondary-foreground: var(--foreground);
-    --button-secondary-hover-background: var(--accent-1);
-  }
 }

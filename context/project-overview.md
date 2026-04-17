@@ -85,15 +85,15 @@ Items are the core unit of Stackflow. Each item has a type that determines its b
 
 #### System Types (Immutable)
 
-| Type       | Icon         | Color               | Content Type | Route             |
-| ---------- | ------------ | ------------------- | ------------ | ----------------- |
-| 🔷 Snippet | `Code`       | `#3b82f6` (blue)    | Text         | `/items/snippets` |
-| 🟣 Prompt  | `Sparkles`   | `#8b5cf6` (purple)  | Text         | `/items/prompts`  |
-| 🟠 Command | `Terminal`   | `#f97316` (orange)  | Text         | `/items/commands` |
-| 🟡 Note    | `StickyNote` | `#fde047` (yellow)  | Text         | `/items/notes`    |
-| ⚫ File    | `File`       | `#6b7280` (gray)    | File         | `/items/files`    |
-| 🩷 Image   | `Image`      | `#ec4899` (pink)    | File         | `/items/images`   |
-| 🟢 Link    | `Link`       | `#10b981` (emerald) | URL          | `/items/links`    |
+| Type       | Icon         | Color Token       | Content Type | Route             |
+| ---------- | ------------ | ----------------- | ------------ | ----------------- |
+| 🔷 Snippet | `Code`       | `var(--accent-3)` | Text         | `/items/snippets` |
+| 🟣 Prompt  | `Sparkles`   | `var(--accent-5)` | Text         | `/items/prompts`  |
+| 🟠 Command | `Terminal`   | `var(--accent-2)` | Text         | `/items/commands` |
+| 🟡 Note    | `StickyNote` | `var(--accent-6)` | Text         | `/items/notes`    |
+| ⚫ File    | `File`       | `var(--accent-1)` | File         | `/items/files`    |
+| 🩷 Image   | `Image`      | `var(--accent-7)` | File         | `/items/images`   |
+| 🟢 Link    | `Link`       | `var(--accent-4)` | URL          | `/items/links`    |
 
 > **Note:** File and Image types are Pro-only features.
 
@@ -429,13 +429,13 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 const systemItemTypes = [
-	{ name: 'snippet', icon: 'Code', color: '#3b82f6', isSystem: true },
-	{ name: 'prompt', icon: 'Sparkles', color: '#8b5cf6', isSystem: true },
-	{ name: 'command', icon: 'Terminal', color: '#f97316', isSystem: true },
-	{ name: 'note', icon: 'StickyNote', color: '#fde047', isSystem: true },
-	{ name: 'file', icon: 'File', color: '#6b7280', isSystem: true },
-	{ name: 'image', icon: 'Image', color: '#ec4899', isSystem: true },
-	{ name: 'link', icon: 'Link', color: '#10b981', isSystem: true },
+	{ name: 'snippet', icon: 'Code', color: 'var(--accent-3)', isSystem: true },
+	{ name: 'prompt', icon: 'Sparkles', color: 'var(--accent-5)', isSystem: true },
+	{ name: 'command', icon: 'Terminal', color: 'var(--accent-2)', isSystem: true },
+	{ name: 'note', icon: 'StickyNote', color: 'var(--accent-6)', isSystem: true },
+	{ name: 'file', icon: 'File', color: 'var(--accent-1)', isSystem: true },
+	{ name: 'image', icon: 'Image', color: 'var(--accent-7)', isSystem: true },
+	{ name: 'link', icon: 'Link', color: 'var(--accent-4)', isSystem: true },
 ]
 
 async function main() {
@@ -648,13 +648,13 @@ Refer to the screenshots below as a base for the dashboard UI. It does not have 
 
 ```css
 :root {
-	--color-snippet: #3b82f6; /* Blue */
-	--color-prompt: #8b5cf6; /* Purple */
-	--color-command: #f97316; /* Orange */
-	--color-note: #fde047; /* Yellow */
-	--color-file: #6b7280; /* Gray */
-	--color-image: #ec4899; /* Pink */
-	--color-link: #10b981; /* Emerald */
+	--color-snippet: var(--accent-3);
+	--color-prompt: var(--accent-5);
+	--color-command: var(--accent-2);
+	--color-note: var(--accent-6);
+	--color-file: var(--accent-1);
+	--color-image: var(--accent-7);
+	--color-link: var(--accent-4);
 }
 ```
 
@@ -684,13 +684,13 @@ export const ITEM_TYPE_ICONS = {
 } as const
 
 export const ITEM_TYPE_COLORS = {
-	snippet: '#3b82f6',
-	prompt: '#8b5cf6',
-	command: '#f97316',
-	note: '#fde047',
-	file: '#6b7280',
-	image: '#ec4899',
-	link: '#10b981',
+	snippet: 'var(--accent-3)',
+	prompt: 'var(--accent-5)',
+	command: 'var(--accent-2)',
+	note: 'var(--accent-6)',
+	file: 'var(--accent-1)',
+	image: 'var(--accent-7)',
+	link: 'var(--accent-4)',
 } as const
 ```
 
