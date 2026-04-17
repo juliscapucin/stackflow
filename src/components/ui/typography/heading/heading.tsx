@@ -9,7 +9,7 @@ type HeadingProps = React.HTMLAttributes<HTMLHeadingElement> &
 
 import { cva, type VariantProps } from "class-variance-authority";
 
-import { cn } from "@/src/lib/utils";
+import { cn } from "@/lib/utils";
 
 const headingVariants = cva("focus-visible:outline-none", {
   variants: {
