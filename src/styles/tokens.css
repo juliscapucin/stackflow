@@ -1,0 +1,222 @@
+/* Auto-generated from tokens/*.json. Do not edit directly. */
+:root {
+  /* Colors */
+  --accent-1: #9BFF96;
+  --accent-2: #F68F60;
+  --accent-3: #4C7ECF;
+  --accent-4: #28B297;
+  --background: #F5F3EA;
+  --background-subtle: #FBFAF7;
+  --destructive: #E7000B;
+  --destructive-emphasis: #8F0007;
+  --destructive-subtle: #F8C3C5;
+  --foreground: #191A29;
+  --foreground-emphasis: #181821;
+  --foreground-subtle: #403F56;
+  --muted-background: #DEDEDE;
+  --muted-foreground: #6B6C76;
+  --ring: #96979E;
+  --success: #069124;
+  --success-emphasis: #035415;
+  --success-subtle: #C5DCCA;
+
+  /* Colors / Button */
+  --button-ghost-active-background: var(--muted-background);
+  --button-ghost-background: var(--background);
+  --button-ghost-border: var(--foreground);
+  --button-ghost-disabled-background: var(--muted-background);
+  --button-ghost-disabled-foreground: var(--muted-foreground);
+  --button-ghost-foreground: var(--foreground);
+  --button-ghost-hover-background: var(--background-subtle);
+  --button-primary-active-background: var(--foreground-emphasis);
+  --button-primary-background: var(--foreground);
+  --button-primary-disabled-background: var(--muted-background);
+  --button-primary-disabled-foreground: var(--muted-foreground);
+  --button-primary-foreground: var(--background);
+  --button-primary-hover-background: var(--foreground-subtle);
+  --button-secondary-active-background: var(--accent-2);
+  --button-secondary-background: var(--background);
+  --button-secondary-border: var(--foreground);
+  --button-secondary-disabled-background: var(--muted-background);
+  --button-secondary-disabled-foreground: var(--muted-foreground);
+  --button-secondary-foreground: var(--foreground);
+  --button-secondary-hover-background: var(--accent-1);
+
+  /* Typography / Body */
+  --body-large-letter-spacing: 0;
+  --body-large-line-height: 24;
+  --body-large-size: 18;
+  --body-large-weight: 400;
+  --body-medium-letter-spacing: 0;
+  --body-medium-line-height: 22;
+  --body-medium-size: 16;
+  --body-medium-weight: 400;
+  --body-small-letter-spacing: 0;
+  --body-small-line-height: 20;
+  --body-small-size: 14;
+  --body-small-weight: 400;
+
+  /* Typography / Display */
+  --display-large-letter-spacing: 0;
+  --display-large-line-height: 80;
+  --display-large-size: 96;
+  --display-large-weight: 900;
+  --display-medium-letter-spacing: 0;
+  --display-medium-line-height: 72;
+  --display-medium-size: 72;
+  --display-medium-weight: 900;
+  --display-small-letter-spacing: 0;
+  --display-small-line-height: 48;
+  --display-small-size: 48;
+  --display-small-weight: 900;
+
+  /* Typography / Font Family */
+  --font-family-brand: "PP Right Grotesk Mono";
+  --font-family-plain: "Roboto Mono";
+
+  /* Typography / Headline */
+  --headline-large-letter-spacing: 0;
+  --headline-large-line-height: 80;
+  --headline-large-size: 64;
+  --headline-large-weight: 900;
+  --headline-medium-letter-spacing: 0;
+  --headline-medium-line-height: 72;
+  --headline-medium-size: 45;
+  --headline-medium-weight: 900;
+  --headline-small-letter-spacing: 0;
+  --headline-small-line-height: 40;
+  --headline-small-size: 40;
+  --headline-small-weight: 900;
+
+  /* Typography / Label */
+  --label-large-letter-spacing: 0;
+  --label-large-line-height: 26;
+  --label-large-size: 20;
+  --label-large-weight: 400;
+  --label-medium-letter-spacing: 0;
+  --label-medium-line-height: 24;
+  --label-medium-size: 18;
+  --label-medium-weight: 400;
+  --label-small-letter-spacing: 0;
+  --label-small-line-height: 22;
+  --label-small-size: 16;
+  --label-small-weight: 400;
+
+  /* Typography / Subline */
+  --subline-large-letter-spacing: 0;
+  --subline-large-line-height: 32;
+  --subline-large-size: 25;
+  --subline-large-weight: 900;
+  --subline-medium-letter-spacing: 0;
+  --subline-medium-line-height: 28;
+  --subline-medium-size: 22;
+  --subline-medium-weight: 900;
+  --subline-small-letter-spacing: 0;
+  --subline-small-line-height: 26;
+  --subline-small-size: 20;
+  --subline-small-weight: 400;
+
+  /* Typography / Title */
+  --title-large-letter-spacing: 0;
+  --title-large-line-height: 80;
+  --title-large-size: 40;
+  --title-large-weight: 900;
+  --title-medium-letter-spacing: 0;
+  --title-medium-line-height: 72;
+  --title-medium-size: 32;
+  --title-medium-weight: 900;
+  --title-small-letter-spacing: 0;
+  --title-small-line-height: 28;
+  --title-small-size: 28;
+  --title-small-weight: 900;
+}
+
+:root[data-theme='dark'] {
+  /* Colors */
+  --accent-1: #9BFF96;
+  --accent-2: #F68F60;
+  --accent-3: #4C7ECF;
+  --accent-4: #28B297;
+  --background: #191A29;
+  --background-subtle: #403F56;
+  --destructive: #E7000B;
+  --destructive-emphasis: #8F0007;
+  --destructive-subtle: #F8C3C5;
+  --foreground: #F5F3EA;
+  --foreground-emphasis: #FFFFFF;
+  --foreground-subtle: #FBFAF7;
+  --muted-background: #6B6C76;
+  --muted-foreground: #DEDEDE;
+  --ring: #96979E;
+  --success: #069124;
+  --success-emphasis: #035415;
+  --success-subtle: #C5DCCA;
+
+  /* Colors / Button */
+  --button-ghost-active-background: var(--muted-background);
+  --button-ghost-background: var(--background);
+  --button-ghost-border: var(--foreground);
+  --button-ghost-disabled-background: var(--muted-background);
+  --button-ghost-disabled-foreground: var(--muted-foreground);
+  --button-ghost-foreground: var(--foreground);
+  --button-ghost-hover-background: var(--background-subtle);
+  --button-primary-active-background: var(--foreground-emphasis);
+  --button-primary-background: var(--foreground);
+  --button-primary-disabled-background: var(--muted-background);
+  --button-primary-disabled-foreground: var(--muted-foreground);
+  --button-primary-foreground: var(--background);
+  --button-primary-hover-background: var(--foreground-subtle);
+  --button-secondary-active-background: var(--accent-2);
+  --button-secondary-background: var(--background);
+  --button-secondary-border: var(--foreground);
+  --button-secondary-disabled-background: var(--muted-background);
+  --button-secondary-disabled-foreground: var(--muted-foreground);
+  --button-secondary-foreground: var(--foreground);
+  --button-secondary-hover-background: var(--accent-1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    /* Colors */
+    --accent-1: #9BFF96;
+    --accent-2: #F68F60;
+    --accent-3: #4C7ECF;
+    --accent-4: #28B297;
+    --background: #191A29;
+    --background-subtle: #403F56;
+    --destructive: #E7000B;
+    --destructive-emphasis: #8F0007;
+    --destructive-subtle: #F8C3C5;
+    --foreground: #F5F3EA;
+    --foreground-emphasis: #FFFFFF;
+    --foreground-subtle: #FBFAF7;
+    --muted-background: #6B6C76;
+    --muted-foreground: #DEDEDE;
+    --ring: #96979E;
+    --success: #069124;
+    --success-emphasis: #035415;
+    --success-subtle: #C5DCCA;
+
+    /* Colors / Button */
+    --button-ghost-active-background: var(--muted-background);
+    --button-ghost-background: var(--background);
+    --button-ghost-border: var(--foreground);
+    --button-ghost-disabled-background: var(--muted-background);
+    --button-ghost-disabled-foreground: var(--muted-foreground);
+    --button-ghost-foreground: var(--foreground);
+    --button-ghost-hover-background: var(--background-subtle);
+    --button-primary-active-background: var(--foreground-emphasis);
+    --button-primary-background: var(--foreground);
+    --button-primary-disabled-background: var(--muted-background);
+    --button-primary-disabled-foreground: var(--muted-foreground);
+    --button-primary-foreground: var(--background);
+    --button-primary-hover-background: var(--foreground-subtle);
+    --button-secondary-active-background: var(--accent-2);
+    --button-secondary-background: var(--background);
+    --button-secondary-border: var(--foreground);
+    --button-secondary-disabled-background: var(--muted-background);
+    --button-secondary-disabled-foreground: var(--muted-foreground);
+    --button-secondary-foreground: var(--foreground);
+    --button-secondary-hover-background: var(--accent-1);
+  }
+}
