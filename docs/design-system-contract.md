@@ -49,7 +49,25 @@ Rules:
 
 ---
 
-## 3) Interaction State Contract
+## 3) Typography Contract
+
+### Font families
+
+- `--font-family-brand` (`PP Right Grotesk Mono`) is used for:
+  - display/headline scales
+  - branded elements
+- `--font-family-plain` (`Roboto Mono`) is used for:
+  - titles
+  - sublines
+  - body/paragraph text
+  - labels and inputs
+  - all default/non-brand content
+
+Use semantic type classes (display/headline/title/subline/body/label) and avoid ad-hoc font-family overrides unless required by a specific brand treatment.
+
+---
+
+## 4) Interaction State Contract
 
 Every interactive element must support:
 
@@ -67,7 +85,7 @@ No opacity hacks for hover/active if dedicated token states exist.
 
 ---
 
-## 4) Generation/Runtime Contract
+## 5) Generation/Runtime Contract
 
 - Token source updates happen in token source files, then regenerate output (do not hand-edit `src/styles/tokens.css`).
 - Runtime code and generated token output are authoritative when docs drift.

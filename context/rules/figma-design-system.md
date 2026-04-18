@@ -136,7 +136,10 @@ Use as: `max-w-[--content]` or `max-w-[--wide]`
 
 ## Typography
 
-Font: `PP Right Grotesk Mono` (`var(--font-family-p-p-right-grotesk-mono)`)
+Font families:
+
+- `--font-family-brand` (`PP Right Grotesk Mono`) for Display + Headline text and branded elements.
+- `--font-family-plain` (`Roboto Mono`) for paragraphs, labels, inputs, sublines, titles, and all other default UI/body copy.
 
 Use semantic type scale classes only. Map Figma text styles to:
 

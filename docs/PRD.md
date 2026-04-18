@@ -382,7 +382,8 @@ ring - ring
 
 #### Font Family
 
-- `PP Right Grotesk Mono`
+- `--font-family-brand` (`PP Right Grotesk Mono`) for display/headline typography and branded elements.
+- `--font-family-plain` (`Roboto Mono`) for titles, sublines, body text, labels, inputs, and all default content.
 
 #### Type Scale
 
