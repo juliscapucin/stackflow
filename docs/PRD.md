@@ -382,7 +382,7 @@ ring - ring
 
 #### Font Family
 
-- `PP Frama`
+- `PP Right Grotesk Mono`
 
 #### Type Scale
 

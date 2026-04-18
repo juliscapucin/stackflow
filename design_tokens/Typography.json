@@ -82,7 +82,7 @@
     {
       "id": "VariableID:10890:531",
       "name": "Font Family/Brand",
-      "description": "Font Family variable for PP Frama",
+      "description": "Font Family variable for PP Right Grotesk Mono",
       "type": "STRING",
       "valuesByMode": { "10890:0": "PP Right Grotesk Mono" },
       "resolvedValuesByMode": {

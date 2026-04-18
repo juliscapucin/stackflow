@@ -136,30 +136,30 @@ Use as: `max-w-[--content]` or `max-w-[--wide]`
 
 ## Typography
 
-Font: `PP Frama` (`var(--font-family-p-p-frama)`)
+Font: `PP Right Grotesk Mono` (`var(--font-family-p-p-right-grotesk-mono)`)
 
 Use semantic type scale classes only. Map Figma text styles to:
 
-| Figma style       | Class               | Use case              |
-|-------------------|---------------------|-----------------------|
-| Display Large     | `display-large`     | Hero headlines        |
-| Display Medium    | `display-medium`    |                       |
-| Display Small     | `display-small`     |                       |
-| Headline Large    | `headline-large`    | Page titles           |
-| Headline Medium   | `headline-medium`   |                       |
-| Headline Small    | `headline-small`    |                       |
-| Title Large       | `title-large`       | Component titles      |
-| Title Medium      | `title-medium`      |                       |
-| Title Small       | `title-small`       |                       |
-| Subline Large     | `subline-large`     |                       |
-| Subline Medium    | `subline-medium`    |                       |
-| Subline Small     | `subline-small`     |                       |
-| Body Large        | `body-large`        | Paragraphs            |
-| Body Medium       | `body-medium`       | Default text          |
-| Body Small        | `body-small`        | Captions              |
-| Label Large       | `label-large`       | Buttons, UI labels    |
-| Label Medium      | `label-medium`      |                       |
-| Label Small       | `label-small`       |                       |
+| Figma style     | Class             | Use case           |
+| --------------- | ----------------- | ------------------ |
+| Display Large   | `display-large`   | Hero headlines     |
+| Display Medium  | `display-medium`  |                    |
+| Display Small   | `display-small`   |                    |
+| Headline Large  | `headline-large`  | Page titles        |
+| Headline Medium | `headline-medium` |                    |
+| Headline Small  | `headline-small`  |                    |
+| Title Large     | `title-large`     | Component titles   |
+| Title Medium    | `title-medium`    |                    |
+| Title Small     | `title-small`     |                    |
+| Subline Large   | `subline-large`   |                    |
+| Subline Medium  | `subline-medium`  |                    |
+| Subline Small   | `subline-small`   |                    |
+| Body Large      | `body-large`      | Paragraphs         |
+| Body Medium     | `body-medium`     | Default text       |
+| Body Small      | `body-small`      | Captions           |
+| Label Large     | `label-large`     | Buttons, UI labels |
+| Label Medium    | `label-medium`    |                    |
+| Label Small     | `label-small`     |                    |
 
 Font weights: `font-regular` (400) · `font-black` (900)
 
@@ -191,10 +191,8 @@ border-2  ← emphasis border
 ### Layout pattern (all sections)
 
 ```tsx
-<section className="py-24">
-  <div className="max-w-[--content] mx-auto px-6">
-    {/* content */}
-  </div>
+<section className='py-24'>
+	<div className='max-w-[--content] mx-auto px-6'>{/* content */}</div>
 </section>
 ```
 
