@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import { Roboto_Mono } from 'next/font/google'
+
+import { Header } from '@/components/blocks/header/header'
+
 import './globals.css'
 
 const fontBrand = localFont({
@@ -53,9 +56,11 @@ export default function RootLayout({
 	return (
 		<html
 			lang='en'
-			className={`${fontBrand.variable} ${fontPlain.variable} h-full antialiased`}
-		>
-			<body className='min-h-full flex flex-col'>{children}</body>
+			className={`${fontBrand.variable} ${fontPlain.variable} h-full antialiased`}>
+			<body className='flex min-h-full flex-col'>
+				<Header />
+				{children}
+			</body>
 		</html>
 	)
 }

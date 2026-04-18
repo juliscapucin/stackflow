@@ -11,11 +11,8 @@ const meta = {
       control: { type: "select" },
       options: ["default", "compact"],
     },
-    href: {
-      control: "text",
-    },
-    "aria-label": {
-      control: "text",
+    asLink: {
+      control: { type: "boolean" },
     },
     className: {
       control: false,
@@ -48,7 +45,6 @@ export const Compact: Story = {
 export const AsHomeLink: Story = {
   args: {
     variant: "default",
-    href: "/",
-    "aria-label": "Stackflow home",
+    asLink: true,
   },
 };
