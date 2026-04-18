@@ -2,7 +2,7 @@
 
 ## Overview
 
-Convert the static HTML prototype (`prototypes/homepage/`) into the actual Next.js app homepage at `src/app/page.tsx`. Faithfully reproduce the design, layout, and animations using Tailwind CSS and shadcn/ui components.
+Convert the static HTML prototype (`prototypes/homepage/`) into the actual Next.js app homepage at `src/app/page.tsx`. Faithfully reproduce the design, layout, and animations using Tailwind CSS and existing `components/ui/*` primitives.
 
 ## Sections
 
@@ -35,27 +35,26 @@ Convert the static HTML prototype (`prototypes/homepage/`) into the actual Next.
 
 ## Links & Navigation
 
-| Element | Destination |
-|---------|-------------|
-| Logo | `/` |
-| Features link | `#features` (anchor scroll) |
-| Pricing link | `#pricing` (anchor scroll) |
-| Sign In | `/sign-in` |
-| Get Started / Get Started Free | `/register` |
-| Start Free Trial (Pro card) | `/register` |
-| See Features (hero) | `#features` (anchor scroll) |
+| Element                        | Destination                 |
+| ------------------------------ | --------------------------- |
+| Logo                           | `/`                         |
+| Features link                  | `#features` (anchor scroll) |
+| Pricing link                   | `#pricing` (anchor scroll)  |
+| Sign In                        | `/sign-in`                  |
+| Get Started / Get Started Free | `/register`                 |
+| Start Free Trial (Pro card)    | `/register`                 |
+| See Features (hero)            | `#features` (anchor scroll) |
 
 ## Technical Notes
 
 - Use Lucide React icons (already installed) instead of inline SVGs where possible
 - Use `Link` from `next/link` for internal routes, plain `<a>` for anchor links
-- Gradient text: use a shared `gradient-text` utility class or inline Tailwind (`bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 bg-clip-text text-transparent`)
 - Navbar scroll effect: track `window.scrollY` in a `useEffect`, toggle background opacity/border classes
 - Chaos animation: port the prototype's `requestAnimationFrame` loop into a `useEffect` with ref-based state to avoid re-renders. Clean up on unmount
 - `ScrollFadeIn` component: wrap each section's content, uses IntersectionObserver with `threshold: 0.1` to trigger a CSS transition (opacity 0->1, translateY 24px->0)
 - Pricing toggle: `useState` for `isYearly`, swap `$8/month` to `$6/month (billed $72/yr)`
 - Mobile menu: `useState` for open/close, hide desktop nav links and show hamburger below `md` breakpoint
-- Use shadcn `Button` component with `variant="default"` for primary and `variant="outline"` for ghost buttons
+- Use the existing `components/ui` `Button` component with `variant="default"` for primary and `variant="outline"` for ghost buttons
 - Footer year: just use `{new Date().getFullYear()}` inline (server component renders current year)
 - Add `scroll-smooth` to the html/body via globals.css or layout
 
@@ -63,7 +62,7 @@ Convert the static HTML prototype (`prototypes/homepage/`) into the actual Next.
 
 - All Tailwind, matching the dark theme from the prototype (dark backgrounds, muted text, blue gradient accents)
 - Use existing CSS variables from `globals.css` where applicable (item type colors, etc.)
-- Feature card accent colors via inline styles or Tailwind arbitrary values
+- Feature card accent colors should use token-backed classes/variables (no inline styles, no Tailwind arbitrary values)
 - Responsive: 3-col -> 2-col -> 1-col for features grid, side-by-side -> stacked for AI section, etc.
 - Keep the prototype's spacing and sizing as closely as reasonable with Tailwind utilities
 

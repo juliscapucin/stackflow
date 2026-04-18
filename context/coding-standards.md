@@ -69,7 +69,7 @@ Example v4 configuration:
 - Use shadcn/ui components where applicable
 - No inline styles
 - Dark mode first, light mode as option
-- For Figma-to-code implementation details and strict token/state rules, follow `/.cursor/rules/figma-design-system.mdc`
+- For Figma-to-code implementation details and strict token/state rules, follow `/context/rules/figma-design-system.md`
 
 ## Database
 

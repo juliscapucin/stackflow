@@ -23,7 +23,7 @@ This is the common workflow that we will use for every single feature/fix:
 9. **Review** - Review AI-generated code periodically and on demand.
 10. Mark as completed in @context/current-feature.md and add to history
 
-When implementing UI from Figma, follow the required flow and constraints in `/.cursor/rules/figma-design-system.mdc` (design context, screenshot parity, token-only styling).
+When implementing UI from Figma, follow the required flow and constraints in `/context/rules/figma-design-system.md` (design context, screenshot parity, token-only styling).
 
 Do NOT commit without permission and until the build and tests pass. If build or tests fail, fix the issues first.
 

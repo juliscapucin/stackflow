@@ -1,4 +1,5 @@
 import * as React from 'react'
+import Link from 'next/link'
 
 import { cn } from '@/lib/utils'
 
@@ -92,13 +93,13 @@ const Logo = React.forwardRef<HTMLAnchorElement | HTMLSpanElement, LogoProps>(
 
 		if (asLink) {
 			return (
-				<a
+				<Link
 					className={rootClass}
 					ref={ref as React.Ref<HTMLAnchorElement>}
 					href='/'
 					aria-label='Stackflow home'>
 					{logoGraphic}
-				</a>
+				</Link>
 			)
 		}
 

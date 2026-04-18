@@ -1,19 +1,13 @@
 ---
-description: Core design-system guardrails. Source of truth is figma-design-system.mdc.
+description: Core design-system guardrails. Canonical content lives in context/rules.
 globs: ["app/**/*.tsx", "app/**/*.ts", "app/**/*.css", "components/**/*.tsx", "components/**/*.ts", "src/**/*.tsx", "src/**/*.ts", "src/**/*.css"]
 alwaysApply: false
 ---
 
-# Design System Core Rules
+# Design System Core Rules (Cursor Wrapper)
 
-This file is intentionally minimal.
+This Cursor wrapper preserves scoped rule application via `globs`.
 
-For full token lists, Figma workflow, state requirements, and implementation details, use:
-`/.cursor/rules/figma-design-system.mdc`
-
-## Non-Negotiables
-
-- Use existing `components/ui/*` primitives before creating new UI.
-- Use token-driven styles only (`src/styles/tokens.css`), no hardcoded colors.
-- No arbitrary Tailwind values.
-- Keep layout and typography semantic and consistent with the Figma rule file.
+Load canonical shared rules:
+`/context/rules/design-system-rules.md`
+`/context/rules/figma-design-system.md`

@@ -26,7 +26,7 @@ This PRD is the source of truth for:
 
 Implementation constraints and AI/code-generation behavior are defined in:
 
-- `.cursor/rules/figma-design-system.mdc`
+- `context/rules/figma-design-system.md`
 - `context/coding-standards.md`
 - `context/ai-interaction.md`
 - `context/current-feature.md`
@@ -261,6 +261,7 @@ Pricing and packaging should remain configurable without major product refactors
 ---
 
 _Last updated: April 2026_
+
 # Product Requirements Document (PRD)
 
 ## Digital Agency Website — AI-Driven Design System
@@ -365,14 +366,14 @@ Buttons use dedicated tokens:
 AI must use these mappings:
 
 ```tsx
-bg - background;
-bg - background - subtle;
-text - foreground;
-text - foreground - subtle;
-text - foreground - emphasis;
-bg - muted - background;
-text - muted - foreground;
-ring - ring;
+bg - background
+bg - background - subtle
+text - foreground
+text - foreground - subtle
+text - foreground - emphasis
+bg - muted - background
+text - muted - foreground
+ring - ring
 ```
 
 ---
@@ -654,21 +655,23 @@ When generating UI, AI MUST:
 ## 13. Example: Hero Section
 
 ```tsx
-<section className="py-24">
-  <div className="max-w-7xl mx-auto px-6">
-    <div className="max-w-3xl flex flex-col gap-8">
-      <h1 className="text-foreground headline-large">We build digital experiences</h1>
+<section className='py-24'>
+	<div className='max-w-7xl mx-auto px-6'>
+		<div className='max-w-3xl flex flex-col gap-8'>
+			<h1 className='text-foreground headline-large'>
+				We build digital experiences
+			</h1>
 
-      <p className="text-foreground-subtle body-large">
-        A creative agency focused on design and technology.
-      </p>
+			<p className='text-foreground-subtle body-large'>
+				A creative agency focused on design and technology.
+			</p>
 
-      <div className="flex gap-8">
-        <Button variant="primary">Start a project</Button>
-        <Button variant="secondary">View work</Button>
-      </div>
-    </div>
-  </div>
+			<div className='flex gap-8'>
+				<Button variant='primary'>Start a project</Button>
+				<Button variant='secondary'>View work</Button>
+			</div>
+		</div>
+	</div>
 </section>
 ```
 

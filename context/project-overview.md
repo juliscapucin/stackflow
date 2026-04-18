@@ -23,7 +23,7 @@
 Use this file as a technical and product-context reference for implementation work.
 
 - For product scope, priorities, and acceptance criteria, use `docs/PRD.md`.
-- For AI/code-generation constraints and Figma implementation flow, use `.cursor/rules/figma-design-system.mdc`.
+- For AI/code-generation constraints and Figma implementation flow, use `context/rules/figma-design-system.md`.
 - For day-to-day execution of the current task, use `context/current-feature.md`.
 
 This document intentionally keeps detailed reference material (architecture, examples, schema, and UX context), while the PRD is the decision-facing product document.
@@ -430,9 +430,24 @@ const prisma = new PrismaClient()
 
 const systemItemTypes = [
 	{ name: 'snippet', icon: 'Code', color: 'var(--accent-3)', isSystem: true },
-	{ name: 'prompt', icon: 'Sparkles', color: 'var(--accent-5)', isSystem: true },
-	{ name: 'command', icon: 'Terminal', color: 'var(--accent-2)', isSystem: true },
-	{ name: 'note', icon: 'StickyNote', color: 'var(--accent-6)', isSystem: true },
+	{
+		name: 'prompt',
+		icon: 'Sparkles',
+		color: 'var(--accent-5)',
+		isSystem: true,
+	},
+	{
+		name: 'command',
+		icon: 'Terminal',
+		color: 'var(--accent-2)',
+		isSystem: true,
+	},
+	{
+		name: 'note',
+		icon: 'StickyNote',
+		color: 'var(--accent-6)',
+		isSystem: true,
+	},
 	{ name: 'file', icon: 'File', color: 'var(--accent-1)', isSystem: true },
 	{ name: 'image', icon: 'Image', color: 'var(--accent-7)', isSystem: true },
 	{ name: 'link', icon: 'Link', color: 'var(--accent-4)', isSystem: true },
@@ -507,17 +522,17 @@ flowchart TB
 
 ### Technology Choices
 
-| Category           | Technology                  | Notes                                  |
-| ------------------ | --------------------------- | -------------------------------------- |
-| **Framework**      | Next.js 16 / React 19       | SSR pages, API routes, single codebase |
-| **Language**       | TypeScript                  | Type safety throughout                 |
-| **Database**       | Neon PostgreSQL             | Serverless Postgres                    |
-| **ORM**            | Prisma 7                    | Latest version with full type safety   |
-| **File Storage**   | Cloudflare R2               | S3-compatible object storage           |
-| **Authentication** | NextAuth v5                 | Email/password + GitHub OAuth          |
-| **AI**             | OpenAI GPT-4o Mini          | Cost-effective for AI features         |
-| **Styling**        | Tailwind CSS v4 + shadcn/ui | Modern, accessible components          |
-| **Payments**       | Stripe                      | Subscriptions & billing                |
+| Category           | Technology                                                                          | Notes                                  |
+| ------------------ | ----------------------------------------------------------------------------------- | -------------------------------------- |
+| **Framework**      | Next.js 16 / React 19                                                               | SSR pages, API routes, single codebase |
+| **Language**       | TypeScript                                                                          | Type safety throughout                 |
+| **Database**       | Neon PostgreSQL                                                                     | Serverless Postgres                    |
+| **ORM**            | Prisma 7                                                                            | Latest version with full type safety   |
+| **File Storage**   | Cloudflare R2                                                                       | S3-compatible object storage           |
+| **Authentication** | NextAuth v5                                                                         | Email/password + GitHub OAuth          |
+| **AI**             | OpenAI GPT-4o Mini                                                                  | Cost-effective for AI features         |
+| **Styling**        | Tailwind CSS v4 + design-system UI primitives (`components/ui/*`, `@base-ui/react`) | Modern, accessible components          |
+| **Payments**       | Stripe                                                                              | Subscriptions & billing                |
 
 ### Important Development Notes
 
@@ -542,6 +557,7 @@ flowchart TB
 - [NextAuth.js Documentation](https://authjs.dev)
 - [Tailwind CSS v4](https://tailwindcss.com/docs)
 - [shadcn/ui Components](https://ui.shadcn.com)
+- [Base UI](https://base-ui.com/react/overview/introduction)
 - [Neon PostgreSQL](https://neon.tech/docs)
 - [Cloudflare R2](https://developers.cloudflare.com/r2)
 - [Stripe Subscriptions](https://stripe.com/docs/billing/subscriptions)
