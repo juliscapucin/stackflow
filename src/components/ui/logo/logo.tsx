@@ -4,16 +4,9 @@ import { cn } from '@/lib/utils'
 
 export type LogoVariant = 'default' | 'compact'
 
-export interface LogoProps extends Omit<
-	React.ComponentPropsWithoutRef<'a'>,
-	'href' | 'children'
-> {
-	/** Which logo SVG to render. */
+export interface LogoProps {
 	variant?: LogoVariant
-	/** When set, the logo is a focusable link (e.g. home). */
-	href?: string
-	/** Accessible name; defaults to `Stackflow`. */
-	'aria-label'?: string
+	asLink?: boolean
 	className?: string
 }
 
@@ -85,51 +78,37 @@ function LogoSvgCompact() {
 	)
 }
 
-function LogoSvg({ variant }: { variant: LogoVariant }) {
-	return variant === 'compact' ? <LogoSvgCompact /> : <LogoSvgDefault />
-}
-
 const Logo = React.forwardRef<HTMLAnchorElement | HTMLSpanElement, LogoProps>(
-	(
-		{
-			className,
-			href,
-			variant = 'default',
-			'aria-label': ariaLabel = 'Stackflow',
-			...props
-		},
-		ref,
-	) => {
+	({ className, asLink = false, variant = 'default' }, ref) => {
 		const rootClass = cn(
 			'inline-flex rounded-lg',
-			href &&
+			asLink &&
 				'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring cursor-pointer',
 			className,
 		)
 
-		const graphic = <LogoSvg variant={variant} />
+		const logoGraphic =
+			variant === 'compact' ? <LogoSvgCompact /> : <LogoSvgDefault />
 
-		if (href) {
+		if (asLink) {
 			return (
 				<a
-					ref={ref as React.Ref<HTMLAnchorElement>}
-					href={href}
 					className={rootClass}
-					aria-label={ariaLabel}
-					{...props}>
-					{graphic}
+					ref={ref as React.Ref<HTMLAnchorElement>}
+					href='/'
+					aria-label='Stackflow home'>
+					{logoGraphic}
 				</a>
 			)
 		}
 
 		return (
 			<span
-				ref={ref as React.Ref<HTMLSpanElement>}
 				className={rootClass}
+				ref={ref as React.Ref<HTMLSpanElement>}
 				role='img'
-				aria-label={ariaLabel}
-				{...props}>
-				{graphic}
+				aria-label='Stackflow'>
+				{logoGraphic}
 			</span>
 		)
 	},
