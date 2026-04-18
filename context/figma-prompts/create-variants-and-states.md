@@ -1,0 +1,2 @@
+- Create variants and states visualization of the mentioned component to this frame
+- Use this frame as an example: https://www.figma.com/design/eyw3V5ekgGb72OEukcz6qx/Stackflow?node-id=10861-15488&t=wkAkprWgKBlaY1KR-4

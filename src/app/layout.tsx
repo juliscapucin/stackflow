@@ -55,6 +55,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html
+			data-theme='dark'
 			lang='en'
 			className={`${fontBrand.variable} ${fontPlain.variable} h-full antialiased`}>
 			<body className='flex min-h-full flex-col'>
