@@ -5,4 +5,7 @@
 
 :root {
 	interpolate-size: allow-keywords; /* To animate auto-height on accordion component */
+	/* Map Next.js font variables onto design tokens (tokens.css keeps human-readable fallbacks). */
+	--font-family-brand: var(--font-family-p-p-right-grotesk-mono);
+	--font-family-plain: var(--font-family-roboto-mono);
 }
